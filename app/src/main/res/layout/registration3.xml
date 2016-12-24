@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dim_10"
+        android:background="@drawable/myborder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Education Detail"
+            android:id="@+id/textView20"
+            android:textSize="@dimen/dim_20"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dim_39"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="secondary / 10th class"
+            android:id="@+id/textView21"
+            android:textStyle="bold"
+            android:textSize="@dimen/dim_15"
+            android:layout_marginTop="@dimen/dim_13"
+            android:layout_marginLeft="@dimen/dim_26"
+            android:layout_marginStart="@dimen/dim_26"
+            android:layout_below="@+id/textView20"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="senior secondary / 12th class"
+            android:id="@+id/textView22"
+            android:textStyle="bold"
+            android:textSize="@dimen/dim_15"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_below="@+id/spinner10"
+            android:layout_alignLeft="@+id/textView21"
+            android:layout_alignStart="@+id/textView21" />
+
+        <TextView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:id="@+id/regseniorsecondarystream"
+            android:textSize="@dimen/dim_12"
+            android:hint="select"
+            android:background="@drawable/mybordergrey"
+            android:paddingLeft="@dimen/dim_10"
+            android:inputType="textAutoComplete"
+            android:singleLine="true"
+            android:layout_below="@+id/textView27"
+            android:layout_alignLeft="@+id/spinner12"
+            android:layout_alignStart="@+id/spinner12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year of Passing"
+            android:id="@+id/textView23"
+            android:textSize="@dimen/dim_12"
+
+            android:layout_below="@+id/textView21"
+            android:layout_marginTop="@dimen/dim_6"
+            android:layout_alignLeft="@+id/textView21"
+            android:layout_alignStart="@+id/textView21" />
+
+        <TextView
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_40"
+            android:padding="@dimen/dim_10"
+            android:textSize="@dimen/dim_12"
+            android:hint="select"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/spinner10"
+            android:layout_below="@+id/textView23"
+            android:layout_alignLeft="@+id/textView22"
+            android:layout_alignStart="@+id/textView22" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Percentage"
+            android:id="@+id/textView24"
+            android:textSize="@dimen/dim_12"
+
+            android:layout_alignBaseline="@+id/textView23"
+            android:layout_alignBottom="@+id/textView23"
+            android:layout_toRightOf="@+id/textView21"
+            android:layout_toEndOf="@+id/textView21"
+            android:layout_marginLeft="@dimen/dim_27"
+            android:layout_marginStart="@dimen/dim_27" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="wrap_content"
+            android:id="@+id/regsecondarypercentage"
+            android:textSize="@dimen/dim_12"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:inputType="number"
+            android:singleLine="true"
+            android:layout_below="@+id/textView24"
+            android:layout_alignLeft="@+id/textView24"
+            android:layout_alignStart="@+id/textView24"
+            android:layout_alignRight="@+id/regseniorsecondarystream"
+            android:layout_alignEnd="@+id/regseniorsecondarystream" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year of Passing"
+            android:id="@+id/textView25"
+            android:textSize="@dimen/dim_12"
+
+            android:layout_marginTop="@dimen/dim_6"
+            android:layout_below="@+id/textView22"
+            android:layout_alignLeft="@+id/textView22"
+            android:layout_alignStart="@+id/textView22" />
+
+        <TextView
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_40"
+            android:id="@+id/spinner12"
+            android:textSize="@dimen/dim_12"
+            android:hint="select"
+            android:padding="@dimen/dim_10"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView25"
+            android:layout_alignLeft="@+id/textView25"
+            android:layout_alignStart="@+id/textView25" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Percentage"
+            android:id="@+id/textView26"
+            android:textSize="@dimen/dim_12"
+
+            android:layout_alignTop="@+id/textView25"
+            android:layout_alignLeft="@+id/regsecondarypercentage"
+            android:layout_alignStart="@+id/regsecondarypercentage" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="wrap_content"
+            android:id="@+id/regseniorsecondarypercnetage"
+            android:textSize="@dimen/dim_12"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_alignTop="@+id/spinner12"
+            android:layout_alignLeft="@+id/textView26"
+            android:layout_alignStart="@+id/textView26"
+            android:layout_alignRight="@+id/regseniorsecondarystream"
+            android:layout_alignEnd="@+id/regseniorsecondarystream" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stream"
+            android:id="@+id/textView27"
+            android:textSize="@dimen/dim_12"
+
+            android:layout_below="@+id/spinner12"
+            android:layout_alignLeft="@+id/regseniorsecondarystream"
+            android:layout_alignStart="@+id/regseniorsecondarystream" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graduation"
+            android:id="@+id/textView28"
+            android:textStyle="bold"
+            android:textSize="@dimen/dim_15"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_below="@+id/regseniorsecondarystream"
+            android:layout_alignLeft="@+id/regseniorsecondarystream"
+            android:layout_alignStart="@+id/regseniorsecondarystream" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year of Passing"
+            android:id="@+id/textView29"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_6"
+            android:layout_below="@+id/textView28"
+            android:layout_alignLeft="@+id/textView28"
+            android:layout_alignStart="@+id/textView28" />
+
+        <TextView
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_40"
+            android:padding="@dimen/dim_10"
+            android:hint="select"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/spinnergrad"
+            android:textSize="@dimen/dim_12"
+            android:layout_below="@+id/textView29"
+            android:layout_alignLeft="@+id/textView29"
+            android:layout_alignStart="@+id/textView29" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Percentage"
+            android:id="@+id/textView30"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_6"
+            android:layout_below="@+id/textView28"
+            android:layout_alignLeft="@+id/regseniorsecondarypercnetage"
+            android:layout_alignStart="@+id/regseniorsecondarypercnetage" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="wrap_content"
+            android:id="@+id/reggraduationpercentage"
+            android:textSize="@dimen/dim_12"
+            android:inputType="number"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:layout_below="@+id/textView30"
+            android:layout_alignLeft="@+id/textView30"
+            android:layout_alignStart="@+id/textView30"
+            android:layout_alignRight="@+id/reggraduationstream"
+            android:layout_alignEnd="@+id/reggraduationstream" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stream"
+            android:id="@+id/textView31"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_6"
+            android:layout_below="@+id/spinnergrad"
+            android:layout_alignLeft="@+id/spinnergrad"
+            android:layout_alignStart="@+id/spinnergrad" />
+
+        <TextView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:id="@+id/reggraduationstream"
+            android:textSize="@dimen/dim_12"
+            android:hint="select"
+            android:singleLine="true"
+            android:inputType="text"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:layout_below="@+id/textView31"
+            android:layout_alignLeft="@+id/textView31"
+            android:layout_alignStart="@+id/textView31" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post Graduation"
+            android:id="@+id/textView32"
+            android:textStyle="bold"
+            android:textSize="@dimen/dim_15"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_below="@+id/reggraduationstream"
+            android:layout_alignLeft="@+id/reggraduationstream"
+            android:layout_alignStart="@+id/reggraduationstream" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year of Passing"
+            android:id="@+id/textView33"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_below="@+id/textView32"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/textView32"
+            android:layout_alignStart="@+id/textView32" />
+
+        <TextView
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_40"
+            android:padding="@dimen/dim_10"
+            android:textSize="@dimen/dim_12"
+            android:hint="select"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/spinnerpostgrad"
+            android:layout_below="@+id/textView33"
+            android:layout_alignLeft="@+id/textView35"
+            android:layout_alignStart="@+id/textView35" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Percentage"
+            android:id="@+id/textView34"
+            android:textSize="@dimen/dim_12"
+            android:layout_alignTop="@+id/textView33"
+            android:layout_alignLeft="@+id/reggraduationpercentage"
+            android:layout_alignStart="@+id/reggraduationpercentage" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="wrap_content"
+            android:id="@+id/regpostgradpercentage"
+            android:textSize="@dimen/dim_12"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:inputType="number"
+            android:layout_alignTop="@+id/spinnerpostgrad"
+            android:layout_alignLeft="@+id/textView34"
+            android:layout_alignStart="@+id/textView34"
+            android:layout_alignRight="@+id/regpostgraduation"
+            android:layout_alignEnd="@+id/regpostgraduation" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stream"
+            android:id="@+id/textView35"
+            android:textSize="@dimen/dim_12"
+            android:layout_below="@+id/spinnerpostgrad"
+            android:layout_alignLeft="@+id/textView33"
+            android:layout_alignStart="@+id/textView33" />
+
+        <TextView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:id="@+id/regpostgraduation"
+            android:textSize="@dimen/dim_12"
+            android:inputType="text"
+            android:hint="select"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:singleLine="true"
+            android:layout_below="@+id/textView35"
+            android:layout_alignLeft="@+id/textView35"
+            android:layout_alignStart="@+id/textView35" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctoraitor"
+            android:id="@+id/textView36"
+            android:textStyle="bold"
+            android:textSize="@dimen/dim_15"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_below="@+id/regpostgraduation"
+            android:layout_alignLeft="@+id/regpostgraduation"
+            android:layout_alignStart="@+id/regpostgraduation" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stream"
+            android:id="@+id/textView37"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_below="@+id/textView36"
+            android:layout_alignLeft="@+id/textView36"
+            android:layout_alignStart="@+id/textView36" />
+
+        <EditText
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:id="@+id/regDoctoraitor"
+            android:textSize="@dimen/dim_12"
+            android:inputType="text"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:layout_below="@+id/textView37"
+            android:layout_alignLeft="@+id/textView37"
+            android:layout_alignStart="@+id/textView37" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/reg3button"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_marginBottom="@dimen/dim_20"
+            android:layout_below="@+id/regDoctoraitor"
+            android:layout_alignRight="@+id/regDoctoraitor"
+            android:layout_alignEnd="@+id/regDoctoraitor"
+            android:layout_alignLeft="@+id/regDoctoraitor"
+            android:layout_alignStart="@+id/regDoctoraitor" />
+    </RelativeLayout>
+</ScrollView>

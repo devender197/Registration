@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dim_10"
+    android:background="@drawable/sliderwall2"
+    android:fillViewport="false">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/dim_10"
+    android:layout_height="match_parent"
+    >
+
+    <EditText
+        android:layout_width="@dimen/dim_250"
+        android:layout_height="@dimen/dim_50"
+        android:id="@+id/editText"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:drawablePadding="@dimen/dim_10"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:hint="Username"
+        android:paddingLeft="@dimen/dim_30"
+        android:layout_below="@+id/imageView10"
+        android:layout_centerHorizontal="true"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="@dimen/dim_39" />
+
+    <EditText
+        android:layout_width="@dimen/dim_250"
+        android:layout_height="@dimen/dim_50"
+        android:id="@+id/editText2"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:drawablePadding="@dimen/dim_10"
+        android:paddingLeft="@dimen/dim_30"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:hint="Password"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/editText"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginTop="@dimen/dim_33"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:id="@+id/button"
+        android:textStyle="bold"
+
+        android:textColor="#ffffff"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="@dimen/dim_53"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView10"
+        android:text="RawanaSampark"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim_100" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register your self"
+        android:id="@+id/Register"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/dim_20"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="@dimen/dim_20"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+</ScrollView>

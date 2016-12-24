@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">RawnaSamparkRegistration</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="gcm_defaultSenderId">679011464072</string>
+    <string name="login_IP_address"> http://www.rawnasampark.com/api/login.php</string>
+    <string name="OTP_IP_address">http://www.rawnasampark.com/api/OTPGeneration.php</string>
+    <string name="OTP_Confirm_address">http://www.rawnasampark.com/api/OTPConfirm.php</string>
+    <string name="Registration">http://www.rawnasampark.com/api/Registration.php</string>
+    <string name="news">http://www.rawnasampark.com/api/news.php</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="upload">http://192.168.42.232/test.php</string>
+    <string name="events">http://www.rawnasampark.com/api/events.php</string>
+    <string name="biography">http://www.rawnasampark.com/api/biography.php</string>
+    <string name="organization">http://www.rawnasampark.com/api/organization.php</string>
+    <string name="News_send">http://www.rawnasampark.com/api/News_send.php</string>
+    <string name="uploadImage">http://www.rawnasampark.com/api/uploadImage.php</string>
+    <string name="prathisthanlist">http://www.rawnasampark.com/api/prathisthanlist.php</string>
+    <string name="pratisthan">http://www.rawnasampark.com/api/pratisthan.php</string>
+    <string name="organizationlist">http://www.rawnasampark.com/api/organizationlist.php</string>
+    <string name="community">http://www.rawnasampark.com/api/community.php</string>
+    <string name="societyProud">http://www.rawnasampark.com/api/societyProud.php</string>
+    <string name="message">http://www.rawnasampark.com/api/message.php</string>
+    <string name="updatefamilydetail">http://www.rawnasampark.com/api/updatefamilydetail.php</string>
+    <string name="updateaddressdetail">http://www.rawnasampark.com/api/updateaddressdetail.php</string>
+    <string name="udateeducationdetail">http://www.rawnasampark.com/api/udateeducationdetail.php</string>
+    <string name="updateextradetail">http://www.rawnasampark.com/api/updateextradetail.php</string>changepassword
+    <string name="changepassword">http://www.rawnasampark.com/api/changepassword.php</string>
+    <string name="switchonoff">http://www.rawnasampark.com/api/switchonoff.php</string>
+    <string name="Team">http://www.rawnasampark.com/api/Team.php</string>
+    <string name="charity">http://www.rawnasampark.com/api/charity.php</string>
+    <string name="matrimonyRegistration">http://www.rawnasampark.com/api/matrimonyRegistration.php</string>
+    <string name="matimony">http://www.rawnasampark.com/api/matimony.php</string>
+    <string name="ip">http://192.168.42.241</string>
+    <string name="matrimonycheck">http://www.rawnasampark.com/api/matrimonycheck.php</string>
+    <string name="search">http://www.rawnasampark.com/api/search.php</string>
+    <string name="download_registration">http://www.rawnasampark.com/api/download_registration.php</string>
+    <string name="districtlist">http://www.rawnasampark.com/api/districtlist.php</string>
+    <string name="statelist">http://www.rawnasampark.com/api/statelist.php</string>
+    <string name="teamlogin">http://www.rawnasampark.com/api/teamlogin.php</string>
+    <string name="regpostgradpercentage">http://www.rawnasampark.com/api/regpostgradpercentage.php</string>
+    <string name="Regfromteam">http://www.rawnasampark.com/api/Regfromteam.php</string>
+    <string name="messageapiregistration">http://www.rawnasampark.com/api/messageapiregistration.php</string>
+    <string name="updateuserimage">http://www.rawnasampark.com/api/updateuserimage.php</string>
+    <string name="eventsend">192.168.42.231/societapp/api/event_send.php</string>
+    <string name="eventimage">192.168.42.231/societapp/api/eventimage.php</string>
+    <string name="prat_send">http://www.rawnasampark.com/api/uploadprathisthan.php</string>
+    <string name="org_send">http://www.rawnasampark.com/api/uploadorganization.php</string>
+    <string name="bio_send">http://www.rawnasampark.com/api/bio_send.php</string>
+    <string name="imageproud">http://www.rawnasampark.com/api/uploadImageproud.php</string>
+    <string name="imageorg">http://www.rawnasampark.com/api/uploadImageorg.php</string>
+    <string name="imageprat">http://www.rawnasampark.com/api/uploadImageprat.php</string>
+
+    <string-array name="Home_about_us">
+    <item >Leads</item>
+    <item >Prospect</item>
+    <item >Opportunity</item>
+    </string-array>
+
+
+        <string name="hello">Hello World, CaptureSignatureActivity!</string>
+        <string name="external_dir">GetSignature</string>
+
+
+</resources>

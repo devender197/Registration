@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myborder"
+        android:padding="@dimen/dim_20"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Number:"
+            android:id="@+id/popcontactno"
+            android:layout_marginTop="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/login"
+            android:layout_alignStart="@+id/login" />
+
+        <TextView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/login"
+            android:layout_below="@+id/popcontactno"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address :"
+            android:id="@+id/textView51"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/password"
+            android:layout_alignLeft="@+id/textView52"
+            android:layout_alignStart="@+id/textView52" />
+
+        <TextView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/textView52"
+            android:layout_below="@+id/textView51"
+            android:layout_alignLeft="@+id/password"
+            android:layout_alignStart="@+id/password" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Id:"
+            android:id="@+id/textView53"
+            android:layout_below="@+id/login"
+            android:layout_alignLeft="@+id/login"
+            android:layout_alignStart="@+id/login"
+            android:layout_marginTop="29dp" />
+
+        <TextView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/password"
+            android:layout_below="@+id/textView53"
+            android:layout_alignLeft="@+id/textView53"
+            android:layout_alignStart="@+id/textView53" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get GMap Location"
+            android:textColor="#ffffff"
+            android:id="@+id/button7"
+            android:background="@drawable/inquirybutton"
+            android:layout_below="@+id/textView52"
+            android:layout_alignLeft="@+id/textView52"
+            android:layout_alignStart="@+id/textView52"
+            android:layout_marginTop="106dp"
+            android:layout_alignRight="@+id/textView52"
+            android:layout_alignEnd="@+id/textView52" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Permanent Address"
+            android:id="@+id/textView91"
+            android:layout_below="@+id/textView52"
+            android:layout_alignLeft="@+id/textView52"
+            android:layout_alignStart="@+id/textView52"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/editText13"
+            android:layout_below="@+id/textView91"
+            android:layout_alignLeft="@+id/textView91"
+            android:layout_alignStart="@+id/textView91"
+            android:layout_alignRight="@+id/button7"
+            android:layout_alignEnd="@+id/button7" />
+
+    </RelativeLayout>
+</RelativeLayout>

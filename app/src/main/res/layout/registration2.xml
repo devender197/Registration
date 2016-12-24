@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/myborder"
+        android:padding="@dimen/dim_10"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parental Village ( पैतृक गांव )"
+            android:id="@+id/textView9"
+            android:textSize="@dimen/dim_12"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/dim_29"
+            android:layout_marginStart="@dimen/dim_29"
+            android:layout_marginTop="@dimen/dim_40"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="@dimen/dim_30"
+            android:id="@+id/RegParentalVillage"
+            android:textSize="@dimen/dim_12"
+            android:background="@drawable/mybordergrey"
+            android:paddingLeft="@dimen/dim_10"
+            android:singleLine="true"
+            android:inputType="textAutoComplete"
+            android:layout_below="@+id/textView9"
+            android:layout_alignLeft="@+id/textView9"
+            android:layout_alignStart="@+id/textView9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Address ( वर्तमान पता )"
+            android:id="@+id/textView10"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_6"
+            android:textStyle="bold"
+            android:layout_below="@+id/RegParentalVillage"
+            android:layout_alignLeft="@+id/RegParentalVillage"
+            android:layout_alignStart="@+id/RegParentalVillage" />
+
+        <EditText
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="@dimen/dim_100"
+            android:textSize="@dimen/dim_12"
+            android:scrollbars="vertical"
+            android:maxLines="5"
+            android:background="@drawable/mybordergrey"
+            android:gravity="top|left"
+            android:padding="@dimen/dim_10"
+            android:inputType="text"
+            android:id="@+id/RegCurrentAddress"
+            android:layout_below="@+id/textView10"
+            android:layout_alignLeft="@+id/textView10"
+            android:layout_alignStart="@+id/textView10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State ( राज्य )"
+            android:textSize="@dimen/dim_12"
+            android:id="@+id/textView11"
+            android:layout_marginTop="@dimen/dim_13"
+            android:textStyle="bold"
+            android:layout_below="@+id/RegCurrentAddress"
+            android:layout_alignLeft="@+id/RegCurrentAddress"
+            android:layout_alignStart="@+id/RegCurrentAddress"
+            android:layout_toStartOf="@+id/textView12"
+            android:layout_toLeftOf="@+id/textView12" />
+
+        <TextView
+            android:layout_width="@dimen/dim_120"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:hint="Select"
+            android:paddingLeft="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/RegSpinnercurstate"
+            android:layout_below="@+id/textView11"
+            android:layout_alignLeft="@+id/textView11"
+            android:layout_alignStart="@+id/textView11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="District ( जिला )"
+            android:textSize="@dimen/dim_12"
+            android:id="@+id/textView12"
+            android:textStyle="bold"
+            android:layout_above="@+id/RegSpinnercurstate"
+            android:layout_alignLeft="@+id/RegSpinnercurdistrict"
+            android:layout_alignStart="@+id/RegSpinnercurdistrict"
+            android:layout_alignRight="@+id/RegSpinnercurdistrict"
+            android:layout_alignEnd="@+id/RegSpinnercurdistrict" />
+
+        <TextView
+            android:layout_width="@dimen/dim_150"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:hint="Select"
+            android:paddingLeft="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/RegSpinnercurdistrict"
+            android:layout_above="@+id/textView13"
+            android:layout_alignRight="@+id/RegCurrentAddress"
+            android:layout_alignEnd="@+id/RegCurrentAddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City ( शहर )"
+            android:id="@+id/textView13"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_6"
+            android:textStyle="bold"
+            android:layout_below="@+id/RegSpinnercurstate"
+            android:layout_alignLeft="@+id/RegSpinnercurstate"
+            android:layout_alignStart="@+id/RegSpinnercurstate"
+            android:layout_alignRight="@+id/RegSpinnercurstate"
+            android:layout_alignEnd="@+id/RegSpinnercurstate" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/RegSpinnercurcity"
+            android:layout_below="@+id/textView13"
+            android:layout_alignLeft="@+id/textView13"
+            android:layout_alignStart="@+id/textView13"
+            android:layout_alignRight="@+id/RegSpinnercurstate"
+            android:layout_alignEnd="@+id/RegSpinnercurstate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Village/Area ( गाँव )"
+            android:id="@+id/textView14"
+            android:textSize="@dimen/dim_12"
+            android:textStyle="bold"
+            android:layout_above="@+id/RegSpinnercurcity"
+            android:layout_alignLeft="@+id/RegSpinnercurdistrict"
+            android:layout_alignStart="@+id/RegSpinnercurdistrict"
+            android:layout_alignRight="@+id/RegSpinnercurdistrict"
+            android:layout_alignEnd="@+id/RegSpinnercurdistrict" />
+
+        <EditText
+            android:layout_width="@dimen/dim_120"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:background="@drawable/mybordergrey"
+            android:singleLine="true"
+
+            android:inputType="textAutoComplete"
+            android:id="@+id/RegSpinnercurvillage"
+            android:layout_below="@+id/textView14"
+            android:layout_alignLeft="@+id/textView14"
+            android:layout_alignStart="@+id/textView14"
+            android:layout_alignRight="@+id/regpermentaddress"
+            android:layout_alignEnd="@+id/regpermentaddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Permenant address (स्थाई पता)"
+            android:id="@+id/textView15"
+            android:textSize="@dimen/dim_12"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_below="@+id/RegSpinnercurcity"
+            android:layout_alignLeft="@+id/RegSpinnercurcity"
+            android:layout_alignStart="@+id/RegSpinnercurcity" />
+
+        <EditText
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="@dimen/dim_100"
+            android:id="@+id/regpermentaddress"
+            android:textSize="@dimen/dim_12"
+            android:scrollbars="vertical"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:gravity="top|left"
+            android:maxLines="5"
+            android:inputType="text"
+            android:layout_below="@+id/textView15"
+            android:layout_alignLeft="@+id/textView15"
+            android:layout_alignStart="@+id/textView15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State  ( राज्य )"
+            android:textSize="@dimen/dim_12"
+            android:id="@+id/textView16"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/textView17"
+            android:layout_alignLeft="@+id/regpermentaddress"
+            android:layout_alignStart="@+id/regpermentaddress"
+            android:layout_alignRight="@+id/RegSpinnercurcity"
+            android:layout_alignEnd="@+id/RegSpinnercurcity" />
+
+        <TextView
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:hint="Select"
+            android:paddingLeft="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/RegSpinnerperstate"
+            android:layout_below="@+id/textView16"
+            android:layout_alignLeft="@+id/textView16"
+            android:layout_alignStart="@+id/textView16"
+            android:layout_alignRight="@+id/RegSpinnercurcity"
+            android:layout_alignEnd="@+id/RegSpinnercurcity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="District ( जिला )"
+            android:textSize="@dimen/dim_12"
+            android:id="@+id/textView17"
+            android:textStyle="bold"
+            android:layout_below="@+id/regpermentaddress"
+            android:layout_alignLeft="@+id/RegSpinnercurvillage"
+            android:layout_alignStart="@+id/RegSpinnercurvillage"
+            android:layout_marginTop="@dimen/dim_16" />
+
+        <TextView
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:hint="Select"
+            android:paddingLeft="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/RegSpinnerperdistrict"
+            android:layout_below="@+id/textView17"
+            android:layout_alignLeft="@+id/textView17"
+            android:layout_alignStart="@+id/textView17"
+            android:layout_alignRight="@+id/regpermentaddress"
+            android:layout_alignEnd="@+id/regpermentaddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City ( शहर )"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_6"
+            android:id="@+id/textView18"
+            android:textStyle="bold"
+            android:layout_below="@+id/RegSpinnerperstate"
+            android:layout_alignLeft="@+id/RegSpinnerperstate"
+            android:layout_alignStart="@+id/RegSpinnerperstate" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/RegSpinnerpercity"
+            android:layout_below="@+id/textView18"
+            android:layout_alignLeft="@+id/textView18"
+            android:layout_alignStart="@+id/textView18"
+            android:layout_alignRight="@+id/RegSpinnerperstate"
+            android:layout_alignEnd="@+id/RegSpinnerperstate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Village/Area ( गाँव )"
+            android:textSize="@dimen/dim_12"
+            android:id="@+id/textView19"
+            android:layout_marginTop="@dimen/dim_6"
+            android:textStyle="bold"
+            android:layout_below="@+id/RegSpinnerperdistrict"
+            android:layout_alignLeft="@+id/RegSpinnerperdistrict"
+            android:layout_alignStart="@+id/RegSpinnerperdistrict"
+            android:layout_alignRight="@+id/RegSpinnerperdistrict"
+            android:layout_alignEnd="@+id/RegSpinnerperdistrict" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:paddingLeft="@dimen/dim_10"
+            android:inputType="textAutoComplete"
+            android:id="@+id/RegSpinnerpervillage"
+            android:layout_below="@+id/textView19"
+            android:layout_alignLeft="@+id/textView19"
+            android:layout_alignStart="@+id/textView19"
+            android:layout_alignRight="@+id/Reg2nextbutton"
+            android:layout_alignEnd="@+id/Reg2nextbutton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next ( अगली प्रविष्टि )"
+            android:id="@+id/Reg2nextbutton"
+            android:textSize="@dimen/dim_12"
+            android:layout_marginTop="@dimen/dim_14"
+            android:layout_below="@+id/reg2contactNo"
+            android:layout_alignRight="@+id/textView19"
+            android:layout_alignEnd="@+id/textView19"
+            android:layout_alignLeft="@+id/RegSpinnerpercity"
+            android:layout_alignStart="@+id/RegSpinnerpercity" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:paddingLeft="@dimen/dim_10"
+            android:inputType="textEmailAddress"
+            android:id="@+id/reg4Emailtextbox"
+
+            android:layout_below="@+id/reg2Email"
+            android:layout_alignRight="@+id/Reg2nextbutton"
+            android:layout_alignEnd="@+id/Reg2nextbutton"
+            android:layout_alignLeft="@+id/RegSpinnerpercity"
+            android:layout_alignStart="@+id/RegSpinnerpercity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMail(ईमेल)"
+            android:textStyle="bold"
+            android:id="@+id/reg2Email"
+            android:layout_marginTop="@dimen/dim_20"
+            android:layout_below="@+id/RegSpinnerpervillage"
+            android:layout_alignLeft="@+id/reg4Emailtextbox"
+            android:layout_alignStart="@+id/reg4Emailtextbox" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact No(ईमेल)"
+            android:textStyle="bold"
+            android:id="@+id/textView43"
+            android:layout_marginTop="@dimen/dim_12"
+            android:layout_below="@+id/reg4Emailtextbox"
+            android:layout_alignLeft="@+id/reg4Emailtextbox"
+            android:layout_alignStart="@+id/reg4Emailtextbox" />
+
+        <EditText
+            android:layout_width="@dimen/dim_100"
+            android:layout_height="@dimen/dim_30"
+            android:textSize="@dimen/dim_12"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:paddingLeft="@dimen/dim_10"
+            android:inputType="phone"
+            android:id="@+id/reg2contactNo"
+            android:layout_below="@+id/textView43"
+            android:layout_alignLeft="@+id/textView43"
+            android:layout_alignStart="@+id/textView43"
+            android:layout_alignRight="@+id/RegSpinnerpervillage"
+            android:layout_alignEnd="@+id/RegSpinnerpervillage" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2ffffff"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/myborder"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <Spinner
+            android:id="@+id/spstate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:spinnerMode="dialog"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/editText1"
+            android:layout_alignLeft="@+id/editText1"
+            android:layout_alignStart="@+id/editText1"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:layout_toStartOf="@+id/imageView1" />
+
+        <Spinner
+            android:id="@+id/spdistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spstate"
+            android:layout_alignRight="@+id/spstate"
+            android:layout_below="@+id/spstate"
+            android:layout_marginTop="21dp"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:spinnerMode="dialog" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="@dimen/dim_250"
+            android:layout_height="30dp"
+
+            android:ems="10"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:singleLine="true"
+            android:hint="Enter Search Word"
+            android:textColor="#000000"
+            android:textColorHint="#33445d"
+            android:textSize="15sp"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21dp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/inquirybutton"
+            android:text="Search"
+            android:textColor="#ffffff"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/editText6"
+            android:layout_alignLeft="@+id/editText6"
+            android:layout_alignStart="@+id/editText6"
+            android:layout_alignRight="@+id/editText6"
+            android:layout_alignEnd="@+id/editText6" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:src="@drawable/greenclose"
+
+            android:layout_toRightOf="@+id/editText1"
+            android:layout_toEndOf="@+id/editText1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/editText6"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:hint="Enter Search Word"
+            android:textColor="#000000"
+            android:textColorHint="#33445d"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/spchoice"
+            android:layout_alignLeft="@+id/spdistrict"
+            android:layout_alignStart="@+id/spdistrict"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:layout_toStartOf="@+id/imageView1" />
+
+        <Spinner
+            android:id="@+id/spchoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:spinnerMode="dialog"
+            android:layout_below="@+id/spdistrict"
+            android:layout_alignLeft="@+id/spdistrict"
+            android:layout_alignStart="@+id/spdistrict"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:layout_toStartOf="@+id/imageView1" />
+    </RelativeLayout>
+
+</RelativeLayout>

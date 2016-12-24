@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/dim_10"
+
+    android:layout_height="match_parent">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/dim_20"
+        android:background="@drawable/myborder"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person Name:"
+            android:id="@+id/textView59"
+            android:layout_marginTop="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/P_shopname"
+            android:layout_alignStart="@+id/P_shopname" />
+
+        <EditText
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:id="@+id/P_shopname"
+            android:padding="@dimen/dim_5"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView59"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person Description:"
+            android:id="@+id/textView61"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/P_shopname"
+            android:layout_alignLeft="@+id/P_shopdescription"
+            android:layout_alignStart="@+id/P_shopdescription" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="@dimen/dim_200"
+            android:padding="@dimen/dim_5"
+            android:id="@+id/P_shopdescription"
+            android:scrollbars="horizontal"
+            android:gravity="top|left"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView61"
+            android:layout_alignLeft="@+id/P_shopname"
+            android:layout_alignStart="@+id/P_shopname" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person Contact No:"
+            android:id="@+id/textView67"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/P_shopdescription"
+            android:layout_alignLeft="@+id/textView61"
+            android:layout_alignStart="@+id/textView61" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/P_contactno"
+            android:padding="@dimen/dim_5"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView67"
+            android:layout_alignLeft="@+id/P_shopdescription"
+            android:layout_alignStart="@+id/P_shopdescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person Address:"
+            android:id="@+id/textView68"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/P_contactno"
+            android:layout_alignLeft="@+id/textView67"
+            android:layout_alignStart="@+id/textView67" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:id="@+id/P_address"
+            android:gravity="top|left"
+            android:scrollbars="horizontal"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView68"
+            android:layout_alignLeft="@+id/P_contactno"
+            android:layout_alignStart="@+id/P_contactno" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person EMail:"
+            android:id="@+id/textView69"
+            android:layout_marginTop="22dp"
+            android:layout_below="@+id/P_address"
+            android:layout_alignLeft="@+id/P_email"
+            android:layout_alignStart="@+id/P_email" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/P_email"
+            android:padding="@dimen/dim_5"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView69"
+            android:layout_alignLeft="@+id/textView71"
+            android:layout_alignStart="@+id/textView71" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person Type:"
+            android:id="@+id/textView70"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/P_email"
+            android:layout_alignLeft="@+id/P_email"
+            android:layout_alignStart="@+id/P_email" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/P_shoptype"
+            android:padding="@dimen/dim_5"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView70"
+            android:layout_alignLeft="@+id/textView70"
+            android:layout_alignStart="@+id/textView70"
+            android:layout_alignRight="@+id/P_email"
+            android:layout_alignEnd="@+id/P_email" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person State:"
+            android:layout_marginTop="@dimen/dim_10"
+            android:id="@+id/textView71"
+            android:layout_below="@+id/P_shoptype"
+            android:layout_alignLeft="@+id/P_contactno"
+            android:layout_alignStart="@+id/P_contactno" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/P_state"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView71"
+            android:padding="@dimen/dim_5"
+            android:singleLine="true"
+            android:layout_alignLeft="@+id/P_shoptype"
+            android:layout_alignStart="@+id/P_shoptype"
+            android:layout_alignRight="@+id/P_shoptype"
+            android:layout_alignEnd="@+id/P_shoptype" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person District:"
+            android:layout_marginTop="@dimen/dim_10"
+            android:id="@+id/textView72"
+            android:layout_below="@+id/P_state"
+            android:layout_alignLeft="@+id/textView71"
+            android:layout_alignStart="@+id/textView71" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/P_district"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView72"
+            android:padding="@dimen/dim_5"
+            android:singleLine="true"
+            android:layout_alignLeft="@+id/P_state"
+            android:layout_alignStart="@+id/P_state"
+            android:layout_alignRight="@+id/P_state"
+            android:layout_alignEnd="@+id/P_state" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Person Image:"
+            android:id="@+id/textView73"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_below="@+id/P_district"
+            android:layout_alignLeft="@+id/textView72"
+            android:layout_alignStart="@+id/textView72" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_100"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/P_image"
+            android:scaleType="fitXY"
+            android:padding="@dimen/dim_5"
+            android:layout_below="@+id/textView73"
+            android:layout_alignLeft="@+id/textView73"
+            android:layout_alignStart="@+id/textView73"
+            android:layout_alignRight="@+id/P_district"
+            android:layout_alignEnd="@+id/P_district" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:id="@+id/button6"
+            android:layout_alignLeft="@+id/P_district"
+            android:layout_alignStart="@+id/P_district"
+            android:layout_marginTop="30dp"
+            android:layout_alignRight="@+id/P_image"
+            android:layout_alignEnd="@+id/P_image"
+            android:layout_below="@+id/P_image" />
+
+    </RelativeLayout>
+</ScrollView>

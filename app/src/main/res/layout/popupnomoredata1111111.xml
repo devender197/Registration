@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80ffffff" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myborder"
+        android:padding="@dimen/dim_20"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No More Data Available"
+            android:gravity="center"
+            android:padding="@dimen/dim_5"
+            android:textSize="@dimen/dim_40"
+            android:id="@+id/password"
+            android:layout_below="@+id/textView53"
+            android:layout_alignLeft="@+id/textView53"
+            android:layout_alignStart="@+id/textView53" />
+
+        <Button
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:text="Got it (समझ गया)"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:id="@+id/button7"
+            android:background="@drawable/inquirybutton"
+
+
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/textView42"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="( Change preference from settings )"
+            android:textSize="@dimen/dim_20"
+            android:id="@+id/textView42"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

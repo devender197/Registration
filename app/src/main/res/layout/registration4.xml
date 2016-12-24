@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="@drawable/myborder"
+        android:layout_margin="@dimen/dim_10"
+        android:padding="@dimen/dim_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extra Detail / Sports(अतिरिक्त )"
+            android:id="@+id/regsport"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dim_22"
+            android:layout_below="@+id/textView40"
+            android:layout_alignLeft="@+id/regextradetail"
+            android:layout_alignStart="@+id/regextradetail" />
+
+        <EditText
+            android:layout_width="@dimen/dim_280"
+            android:layout_height="@dimen/dim_200"
+            android:scrollbars="vertical"
+            android:maxLines="5"
+            android:gravity="top|left"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:hint="Name of sport/level played/ other details"
+            android:id="@+id/regextradetail"
+            android:layout_below="@+id/regsport"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password( पासवर्ड)"
+            android:id="@+id/textView38"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dim_15"
+            android:layout_below="@+id/reg4jobsalary"
+            android:layout_alignLeft="@+id/reg4jobsalary"
+            android:layout_alignStart="@+id/reg4jobsalary" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/regpassword"
+            android:inputType="textPassword"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:layout_below="@+id/textView38"
+            android:layout_alignLeft="@+id/textView38"
+            android:layout_alignStart="@+id/textView38"
+            android:layout_alignRight="@+id/regextradetail"
+            android:layout_alignEnd="@+id/regextradetail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:id="@+id/textView39"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dim_15"
+            android:layout_below="@+id/regpassword"
+            android:layout_alignLeft="@+id/regpassword"
+            android:layout_alignStart="@+id/regpassword" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/regconfirmpassword"
+            android:inputType="textPassword"
+            android:background="@drawable/mybordergrey"
+            android:padding="@dimen/dim_10"
+            android:layout_below="@+id/textView39"
+            android:layout_alignLeft="@+id/textView39"
+            android:layout_alignStart="@+id/textView39"
+            android:layout_alignRight="@+id/regpassword"
+            android:layout_alignEnd="@+id/regpassword" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extra Detail and Password "
+            android:textSize="@dimen/dim_20"
+            android:textStyle="bold"
+            android:id="@+id/textView40"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim_25" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Detail(जानकारी)"
+            android:id="@+id/reg4savebutton"
+            android:layout_marginTop="@dimen/dim_15"
+            android:layout_below="@+id/regconfirmpassword"
+            android:layout_alignLeft="@+id/regconfirmpassword"
+            android:layout_alignStart="@+id/regconfirmpassword"
+            android:layout_alignRight="@+id/regconfirmpassword"
+            android:layout_alignEnd="@+id/regconfirmpassword" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Title(नौकरी का नाम)"
+            android:id="@+id/textView54"
+            android:textStyle="bold"
+            android:layout_below="@+id/regextradetail"
+            android:layout_alignLeft="@+id/regextradetail"
+            android:layout_alignStart="@+id/regextradetail"
+            android:layout_marginTop="@dimen/dim_15" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim_10"
+            android:id="@+id/Reg4jobtitle"
+            android:inputType="text"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView54"
+            android:layout_alignLeft="@+id/textView54"
+            android:layout_alignStart="@+id/textView54"
+            android:layout_alignRight="@+id/regextradetail"
+            android:layout_alignEnd="@+id/regextradetail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Stream (नौकरी धारा)"
+            android:id="@+id/textView65"
+            android:layout_marginTop="@dimen/dim_15"
+            android:hint="select"
+            android:textStyle="bold"
+            android:layout_below="@+id/Reg4jobtitle"
+            android:layout_alignLeft="@+id/Reg4jobtitle"
+            android:layout_alignStart="@+id/Reg4jobtitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_40"
+            android:id="@+id/reg4jobstream"
+            android:background="@drawable/mybordergrey"
+            android:layout_below="@+id/textView65"
+            android:layout_alignLeft="@+id/textView65"
+            android:layout_alignStart="@+id/textView65"
+            android:layout_alignRight="@+id/Reg4jobtitle"
+            android:layout_alignEnd="@+id/Reg4jobtitle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job address( वेतन)"
+            android:id="@+id/textView66"
+            android:textStyle="bold"
+            android:layout_below="@+id/reg4jobstream"
+            android:layout_alignLeft="@+id/reg4jobstream"
+            android:layout_alignStart="@+id/reg4jobstream"
+            android:layout_marginTop="@dimen/dim_15" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybordergrey"
+            android:id="@+id/reg4jobsalary"
+            android:inputType="numberDecimal"
+            android:padding="@dimen/dim_10"
+            android:layout_below="@+id/textView66"
+            android:layout_alignLeft="@+id/textView66"
+            android:layout_alignStart="@+id/textView66"
+            android:layout_alignRight="@+id/reg4jobstream"
+            android:layout_alignEnd="@+id/reg4jobstream" />
+
+    </RelativeLayout>
+</ScrollView>
