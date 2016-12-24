@@ -8,17 +8,18 @@
         android:layout_height="wrap_content"
         android:text="Sunday"
         android:id="@+id/textView45"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_below="@+id/textView46"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_toLeftOf="@+id/textView47"
+        android:layout_toStartOf="@+id/textView47" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Shop Timing"
+        android:textSize="30dp"
         android:id="@+id/textView46"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -31,23 +32,24 @@
         android:padding="5dp"
         android:background="@drawable/mybordergrey"
         android:id="@+id/textView47"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp"
-        android:layout_below="@+id/textView46"
-        android:layout_toRightOf="@+id/textView45"
-        android:layout_toEndOf="@+id/textView45"
-        android:layout_marginTop="55dp" />
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@+id/textView48"
+        android:layout_alignBottom="@+id/textView48"
+        android:layout_toLeftOf="@+id/textView48"
+        android:layout_toStartOf="@+id/textView48" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TO"
         android:id="@+id/textView48"
-        android:layout_alignTop="@+id/textView45"
-        android:layout_toRightOf="@+id/textView47"
-        android:layout_toEndOf="@+id/textView47"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp" />
+        android:layout_marginRight="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_alignBaseline="@+id/textView45"
+        android:layout_alignBottom="@+id/textView45"
+        android:layout_alignRight="@+id/textView46"
+        android:layout_alignEnd="@+id/textView46" />
 
     <TextView
         android:layout_width="100dp"
@@ -56,9 +58,72 @@
         android:padding="5dp"
         android:background="@drawable/mybordergrey"
         android:id="@+id/textView49"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_alignTop="@+id/textView47"
-        android:layout_toRightOf="@+id/textView46"
-        android:layout_toEndOf="@+id/textView46" />
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_alignBaseline="@+id/textView48"
+        android:layout_alignBottom="@+id/textView48"
+        android:layout_alignLeft="@+id/textView48"
+        android:layout_alignStart="@+id/textView48" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="5dp"
+        android:background="@drawable/mybordergrey"
+        android:id="@+id/textView50"
+        android:layout_below="@+id/textView47"
+        android:layout_alignRight="@+id/textView47"
+        android:layout_alignEnd="@+id/textView47"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="5dp"
+        android:background="@drawable/mybordergrey"
+        android:id="@+id/textView55"
+        android:layout_alignTop="@+id/textView50"
+        android:layout_alignLeft="@+id/textView49"
+        android:layout_alignStart="@+id/textView49" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TO"
+        android:id="@+id/textView56"
+        android:layout_alignTop="@+id/textView55"
+        android:layout_toRightOf="@+id/textView47"
+        android:layout_toEndOf="@+id/textView47" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:id="@+id/textView57"
+        android:layout_alignBaseline="@+id/textView50"
+        android:layout_alignBottom="@+id/textView50"
+        android:layout_alignRight="@+id/textView45"
+        android:layout_alignEnd="@+id/textView45" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday"
+        android:id="@+id/textView58"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/textView45"
+        android:layout_alignEnd="@+id/textView45" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="5dp"
+        android:background="@drawable/mybordergrey"
+        android:id="@+id/textView60"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView50"
+        android:layout_alignStart="@+id/textView50" />
 </RelativeLayout>
