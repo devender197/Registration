@@ -164,7 +164,7 @@ public class FirstScreen extends Activity {
             public void onErrorResponse(VolleyError error)
             {
                 Log.d("error",error.toString());
-                pDialog.dismiss();
+               // pDialog.dismiss();
                 Toast.makeText(FirstScreen.this, "Invalid Password", Toast.LENGTH_LONG).show();
             }
 

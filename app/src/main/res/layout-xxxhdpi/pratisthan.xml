@@ -2,13 +2,13 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_margin="@dimen/dim_10"
+    android:layout_margin="10dp"
 
     android:layout_height="match_parent">
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:paddingBottom="@dimen/dim_20"
+        android:paddingBottom="20dp"
         android:background="@drawable/myborder"
         android:layout_height="wrap_content">
 
@@ -18,16 +18,16 @@
             android:layout_height="wrap_content"
             android:text="Shop Name:"
             android:id="@+id/textView59"
-            android:layout_marginTop="@dimen/dim_46"
+            android:layout_marginTop="46dp"
             android:layout_alignParentTop="true"
             android:layout_alignLeft="@+id/P_shopname"
             android:layout_alignStart="@+id/P_shopname" />
 
         <EditText
-            android:layout_width="@dimen/dim_300"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:id="@+id/P_shopname"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:singleLine="true"
             android:background="@drawable/mybordergrey"
             android:layout_below="@+id/textView59"
@@ -38,15 +38,15 @@
             android:layout_height="wrap_content"
             android:text="Shop Description:"
             android:id="@+id/textView61"
-            android:layout_marginTop="@dimen/dim_16"
+            android:layout_marginTop="16dp"
             android:layout_below="@+id/P_shopname"
             android:layout_alignLeft="@+id/P_shopdescription"
             android:layout_alignStart="@+id/P_shopdescription" />
 
         <EditText
-            android:layout_width="@dimen/dim_300"
-            android:layout_height="@dimen/dim_200"
-            android:padding="@dimen/dim_5"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:padding="5dp"
             android:id="@+id/P_shopdescription"
             android:scrollbars="horizontal"
             android:gravity="top|left"
@@ -60,16 +60,16 @@
             android:layout_height="wrap_content"
             android:text="Shop Contact No:"
             android:id="@+id/textView67"
-            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/P_shopdescription"
             android:layout_alignLeft="@+id/textView61"
             android:layout_alignStart="@+id/textView61" />
 
         <EditText
-            android:layout_width="@dimen/dim_300"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/P_contactno"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:inputType="phone"
             android:singleLine="true"
             android:background="@drawable/mybordergrey"
@@ -82,18 +82,18 @@
             android:layout_height="wrap_content"
             android:text="Shop Address:"
             android:id="@+id/textView68"
-            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/P_contactno"
             android:layout_alignLeft="@+id/textView67"
             android:layout_alignStart="@+id/textView67" />
 
         <EditText
-            android:layout_width="@dimen/dim_300"
-            android:layout_height="@dimen/dim_200"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
             android:id="@+id/P_address"
             android:gravity="top|left"
             android:scrollbars="horizontal"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:background="@drawable/mybordergrey"
             android:layout_below="@+id/textView68"
             android:layout_alignLeft="@+id/P_contactno"
@@ -104,16 +104,16 @@
             android:layout_height="wrap_content"
             android:text="Shop EMail:"
             android:id="@+id/textView69"
-            android:layout_marginTop="@dimen/dim_22"
+            android:layout_marginTop="22dp"
             android:layout_below="@+id/P_address"
             android:layout_alignLeft="@+id/P_email"
             android:layout_alignStart="@+id/P_email" />
 
         <EditText
-            android:layout_width="@dimen/dim_300"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/P_email"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:singleLine="true"
             android:inputType="textEmailAddress"
             android:background="@drawable/mybordergrey"
@@ -126,7 +126,7 @@
             android:layout_height="wrap_content"
             android:text="Shop Type:"
             android:id="@+id/textView70"
-            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/P_email"
             android:layout_alignLeft="@+id/P_email"
             android:layout_alignStart="@+id/P_email" />
@@ -135,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/P_shoptype"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:background="@drawable/mybordergrey"
             android:layout_below="@+id/textView70"
             android:layout_alignLeft="@+id/textView70"
@@ -147,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Shop State:"
-            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginTop="10dp"
             android:id="@+id/textView71"
             android:layout_below="@+id/P_shoptype"
             android:layout_alignLeft="@+id/P_contactno"
@@ -155,11 +155,11 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dim_30"
+            android:layout_height="30dp"
             android:id="@+id/P_state"
             android:background="@drawable/mybordergrey"
             android:layout_below="@+id/textView71"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:singleLine="true"
             android:layout_alignLeft="@+id/P_shoptype"
             android:layout_alignStart="@+id/P_shoptype"
@@ -170,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Shop District:"
-            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginTop="10dp"
             android:id="@+id/textView72"
             android:layout_below="@+id/P_state"
             android:layout_alignLeft="@+id/textView71"
@@ -178,7 +178,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dim_30"
+            android:layout_height="30dp"
             android:id="@+id/P_district"
             android:background="@drawable/mybordergrey"
             android:layout_below="@+id/textView72"
@@ -194,21 +194,23 @@
             android:layout_height="wrap_content"
             android:text="Shop Image:"
             android:id="@+id/textView73"
-            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/P_district"
             android:layout_alignLeft="@+id/textView72"
             android:layout_alignStart="@+id/textView72" />
 
         <ImageView
-            android:layout_width="@dimen/dim_200"
-            android:layout_height="@dimen/dim_100"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
             android:background="@drawable/mybordergrey"
             android:id="@+id/P_image"
             android:scaleType="fitXY"
             android:padding="5dp"
             android:layout_below="@+id/textView73"
             android:layout_alignLeft="@+id/textView73"
-            android:layout_alignStart="@+id/textView73" />
+            android:layout_alignStart="@+id/textView73"
+            android:layout_alignRight="@+id/P_district"
+            android:layout_alignEnd="@+id/P_district" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -216,13 +218,13 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Shop lats/longs"
             android:id="@+id/textView74"
-            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/P_image"
             android:layout_alignLeft="@+id/P_image"
             android:layout_alignStart="@+id/P_image" />
 
         <EditText
-            android:layout_width="@dimen/dim_200"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/P_latslongs"
             android:padding="5dp"
@@ -238,7 +240,7 @@
             android:layout_height="wrap_content"
             android:text="submit"
             android:id="@+id/button6"
-            android:layout_marginTop="@dimen/dim_26"
+            android:layout_marginTop="26dp"
             android:layout_below="@+id/amount"
             android:layout_alignLeft="@+id/amount"
             android:layout_alignStart="@+id/amount"
@@ -246,7 +248,7 @@
             android:layout_alignEnd="@+id/amount" />
 
         <Button
-            android:layout_width="@dimen/dim_50"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="Get Lats/Longs"
             android:id="@+id/button8"
@@ -262,18 +264,18 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Shop Timing"
             android:id="@+id/textView"
-            android:layout_marginTop="@dimen/dim_21"
+            android:layout_marginTop="21dp"
             android:layout_below="@+id/P_latslongs"
             android:layout_alignLeft="@+id/P_latslongs"
             android:layout_alignStart="@+id/P_latslongs" />
 
         <TextView
-            android:layout_width="@dimen/dim_300"
-            android:layout_height="@dimen/dim_200"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
             android:id="@+id/shoptiming"
             android:gravity="top|left"
             android:scrollbars="horizontal"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:background="@drawable/mybordergrey"
             android:layout_below="@+id/textView"
             android:layout_alignLeft="@+id/textView"
@@ -285,16 +287,16 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Monthly Holiday"
             android:id="@+id/textView2"
-            android:layout_marginTop="@dimen/dim_24"
+            android:layout_marginTop="24dp"
             android:layout_below="@+id/shoptiming"
             android:layout_alignLeft="@+id/shoptiming"
             android:layout_alignStart="@+id/shoptiming" />
 
         <TextView
-            android:layout_width="@dimen/dim_200"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/monthlyholiday"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:enabled="false"
             android:background="@drawable/mybordergrey"
             android:layout_alignLeft="@+id/textView2"
@@ -305,16 +307,16 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dim_100"
+            android:layout_height="100dp"
             android:background="@drawable/mybordergrey"
             android:id="@+id/visitingcard"
             android:scaleType="fitXY"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:layout_below="@+id/textView3"
             android:layout_alignLeft="@+id/monthlyholiday"
             android:layout_alignStart="@+id/monthlyholiday"
-            android:layout_toLeftOf="@+id/button8"
-            android:layout_toStartOf="@+id/button8" />
+            android:layout_alignRight="@+id/monthlyholiday"
+            android:layout_alignEnd="@+id/monthlyholiday" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -322,7 +324,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Visiting Card"
             android:id="@+id/textView3"
-            android:layout_marginTop="@dimen/dim_21"
+            android:layout_marginTop="21dp"
             android:layout_below="@+id/monthlyholiday"
             android:layout_alignLeft="@+id/visitingcard"
             android:layout_alignStart="@+id/visitingcard" />
@@ -333,18 +335,18 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Inside View"
             android:id="@+id/textView4"
-            android:layout_marginTop="@dimen/dim_23"
+            android:layout_marginTop="23dp"
             android:layout_below="@+id/visitingcard"
             android:layout_alignLeft="@+id/visitingcard"
             android:layout_alignStart="@+id/visitingcard" />
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dim_100"
+            android:layout_height="100dp"
             android:background="@drawable/mybordergrey"
             android:id="@+id/insideview"
             android:scaleType="fitXY"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:layout_below="@+id/textView4"
             android:layout_alignLeft="@+id/textView4"
             android:layout_alignStart="@+id/textView4"
@@ -357,57 +359,23 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Amount:"
             android:id="@+id/textView5"
-            android:layout_marginTop="@dimen/dim_32"
+            android:layout_marginTop="32dp"
             android:layout_below="@+id/insideview"
             android:layout_alignLeft="@+id/insideview"
             android:layout_alignStart="@+id/insideview" />
 
         <EditText
-            android:layout_width="@dimen/dim_200"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/amount"
-            android:padding="@dimen/dim_5"
+            android:padding="5dp"
             android:enabled="false"
             android:background="@drawable/mybordergrey"
             android:layout_below="@+id/textView5"
             android:layout_alignLeft="@+id/textView5"
             android:layout_alignStart="@+id/textView5"
-            android:layout_alignRight="@+id/monthlyholiday"
-            android:layout_alignEnd="@+id/monthlyholiday" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Upload"
-            android:id="@+id/VisitingCardImageUpload"
-            android:layout_alignLeft="@+id/button8"
-            android:layout_alignStart="@+id/button8"
-            android:layout_alignRight="@+id/monthlyholiday"
-            android:layout_alignEnd="@+id/monthlyholiday"
-            android:layout_alignTop="@+id/visitingcard"
-            android:layout_alignBottom="@+id/visitingcard" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Upload"
-            android:id="@+id/InsideViewImageUpload"
-            android:layout_alignTop="@+id/insideview"
-            android:layout_toRightOf="@+id/insideview"
-            android:layout_alignBottom="@+id/insideview"
-            android:layout_alignRight="@+id/VisitingCardImageUpload"
-            android:layout_alignEnd="@+id/VisitingCardImageUpload" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Upload"
-            android:id="@+id/ShopImageUpload"
-            android:layout_alignTop="@+id/P_image"
-            android:layout_toRightOf="@+id/P_image"
-            android:layout_alignBottom="@+id/P_image"
-            android:layout_alignRight="@+id/P_district"
-            android:layout_alignEnd="@+id/P_district" />
+            android:layout_alignRight="@+id/insideview"
+            android:layout_alignEnd="@+id/insideview" />
 
     </RelativeLayout>
 </ScrollView>

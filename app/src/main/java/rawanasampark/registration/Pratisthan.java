@@ -63,14 +63,17 @@ public class Pratisthan extends ActionBarActivity{
     TextView timing;
     Spinner type;
     String success;
-    ImageView upload;
+    Button UploadShopImage,UploadVisitingCardImage,UploadInsideImage;
+    ImageView upload,visitingCard,insideview;
     int count;
     ProgressDialog dialog = null;
     TextView parstate,pardistrict;
     Button latlong,submit;
     Bitmap bitmap;
-    private int PICK_IMAGE_REQUEST = 1;
-    Uri selectedFileUri;
+    private int PICK_IMAGE_REQUEST_1 = 1;
+    private int PICK_IMAGE_REQUEST_2 = 2;
+    private int PICK_IMAGE_REQUEST_3 = 3;
+    Uri selectedFileUri1,selectedFileUri2,selectedFileUri3;
     String strMyImagePath = null;
     TextView messageText;
     Button uploadButton;
@@ -88,12 +91,17 @@ public class Pratisthan extends ActionBarActivity{
     private ArrayList<String> arrayList3;
     PopupWindow mpopup;
     JSONArray arr;
-    private String selectedFilePath;
+    private String selectedFilePath1,selectedFilePath2,selectedFilePath3;
     String[] id,code;
     String ID,usrID;
     String stringLongitude,stringlattitude;
     double latitude ,longitude ;
     int statecount,districtcount;
+    TextView mont1,mont2,tues1,tues2,wed1,wed2,thus1,thus2,fri1,fri2,sat1,sat2,sunt1,sunt2;
+    Constant constant = new Constant();
+    Button saveTime;
+     int PopupFLAG=0;
+    SetTime setTime;
 //    GPSTracker gpsTracker = new GPSTracker(this);
 
     @Override
@@ -109,6 +117,11 @@ public class Pratisthan extends ActionBarActivity{
         email= (EditText) findViewById(R.id.P_email);
         latslong= (EditText) findViewById(R.id.P_latslongs);
         upload = (ImageView) findViewById(R.id.P_image);
+        visitingCard = (ImageView) findViewById(R.id.visitingcard);
+        insideview = (ImageView) findViewById(R.id.insideview);
+        UploadShopImage = (Button) findViewById(R.id.ShopImageUpload);
+        UploadVisitingCardImage = (Button) findViewById(R.id.VisitingCardImageUpload);
+        UploadInsideImage = (Button) findViewById(R.id.InsideViewImageUpload);
         usrID = new Database().usercode(Pratisthan.this);
         description.setScroller(new Scroller(getApplicationContext()));
         description.setVerticalScrollBarEnabled(true);
@@ -117,12 +130,121 @@ public class Pratisthan extends ActionBarActivity{
         address.setVerticalScrollBarEnabled(true);
         address.setMovementMethod(new ScrollingMovementMethod());
         timing  = (TextView) findViewById(R.id.shoptiming);
+        UploadShopImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                compress(selectedFileUri1,"Shop");
+            }
+        });
+        UploadVisitingCardImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                compress(selectedFileUri3,"visiting card");
+            }
+        });
+        UploadInsideImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                compress(selectedFileUri2,"inside View");
+            }
+        });
         timing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                PopupFLAG = 1;
+                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                final View layout = inflater.inflate(R.layout.popuptiming, null);
+                mpopup = new PopupWindow(layout, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, true);
+                mpopup.setBackgroundDrawable(new BitmapDrawable());
+//                View contentView = mpopup.getContentView();
+//                contentView.getBackground().setAlpha(150);
+                mpopup.setAnimationStyle(android.R.style.Animation_Translucent);
+                mpopup.setFocusable(true);
+                mpopup.setTouchable(true);
+                mpopup.setOutsideTouchable(true);
+                mpopup.setTouchInterceptor(new View.OnTouchListener()
+                {
+
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        if (event.getAction() == MotionEvent.ACTION_OUTSIDE)
+                        {
+                            mpopup.dismiss();
+                            return true;
+                        }
+                        return false;
+                    }
+
+                });
+                mpopup.showAtLocation(layout, Gravity.CENTER, 0, 0);
+                 mont1 = (TextView) layout.findViewById(R.id.mont1);
+                 mont2 = (TextView) layout.findViewById(R.id.mont2);
+                 tues1 = (TextView) layout.findViewById(R.id.tuest1);
+                 tues2 = (TextView) layout.findViewById(R.id.tuest2);
+                 wed1 =  (TextView) layout.findViewById(R.id.wedt1);
+                 wed2 =  (TextView) layout.findViewById(R.id.wedt2);
+                 thus1 = (TextView) layout.findViewById(R.id.thurt1);
+                 thus2 = (TextView) layout.findViewById(R.id.thurt2);
+                 fri1 =  (TextView) layout.findViewById(R.id.frit1);
+                 fri2 =  (TextView) layout.findViewById(R.id.frit2);
+                 sat1 =  (TextView) layout.findViewById(R.id.satt1);
+                 sat2 =  (TextView) layout.findViewById(R.id.satt2);
+                 sunt1 =  (TextView) layout.findViewById(R.id.sunt1);
+                 sunt2 =  (TextView) layout.findViewById(R.id.sunt2);
+                saveTime = (Button) layout.findViewById(R.id.SaveTime);
+
+                final SetTime Montime1 = new SetTime(mont1,layout.getContext(),Constant.Montime1);
+                final SetTime Montime2 =new SetTime(mont2,layout.getContext(),Constant.Montime2);
+                final SetTime Tuestime1=new SetTime(tues1,layout.getContext(),Constant.Tuestime1);
+                final SetTime Tuestime2=new SetTime(tues2,layout.getContext(),Constant.Tuestime2);
+                final SetTime Wedtime1 =new SetTime(wed1,layout.getContext(),Constant.Wedtime1);
+                final SetTime Wedtime2 =new SetTime(wed2,layout.getContext(),Constant.Wedtime2);
+                final SetTime Thurstime1=new SetTime(thus1,layout.getContext(),Constant.Thurstime1);
+                final SetTime Thurstime2=new SetTime(thus2,layout.getContext(),Constant.Thurstime2);
+                final SetTime Fritime1 =new SetTime(fri1,layout.getContext(),Constant.Fritime1);
+                final SetTime Fritime2 =new SetTime(fri2,layout.getContext(),Constant.Fritime2);
+                final SetTime Sattime1 =new SetTime(sat1,layout.getContext(),Constant.Sattime1);
+                final SetTime Sattime2 =new SetTime(sat2,layout.getContext(),Constant.Sattime2);
+                final SetTime Suntime1 =new SetTime(sunt1,layout.getContext(),Constant.Suntime1);
+                final SetTime Suntime2 =new SetTime(sunt2,layout.getContext(),Constant.Suntime2);
+                saveTime.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mpopup.dismiss();
+                        String str = "Sunday: "+sunt1.getText().toString()+"  to  "+sunt2.getText().toString()+"\n"+ "monday: "+mont1.getText().toString()+"  to  "+mont2.getText().toString()+"\n"+
+                                "tuesday: "+tues1.getText().toString()+"  to  "+tues2.getText().toString()+"\n"+
+                                "wednesday: "+wed1.getText().toString()+"  to  "+wed2.getText().toString()+"\n"+
+                                "Thrusday: "+thus1.getText().toString()+"  to  "+thus2.getText().toString()+"\n"+
+                                "Friday: "+fri1.getText().toString()+"      to  "+fri2.getText().toString()+"\n"+
+                                "Saturday: "+sat1.getText().toString()+"  to  "+sat2.getText().toString()+"\n";
+                        Constant.Suntime1 = Suntime1.getTime();
+                        Constant.Suntime2 = Suntime2.getTime();
+
+                        Constant.Montime1 = Montime1.getTime();
+                        Constant.Montime2 = Montime2.getTime();
+
+                        Constant.Tuestime1 = Tuestime1.getTime();
+                        Constant.Tuestime2 = Tuestime2.getTime();
+
+                        Constant.Wedtime1 = Wedtime1.getTime();
+                        Constant.Wedtime2 = Wedtime2.getTime();
+
+                        Constant.Thurstime1 = Thurstime1.getTime();
+                        Constant.Thurstime2 = Thurstime2.getTime();
+
+                        Constant.Fritime1 = Fritime1.getTime();
+                        Constant.Fritime2 = Fritime2.getTime();
+
+                        Constant.Sattime1 = Sattime1.getTime();
+                        Constant.Sattime2 = Sattime2.getTime();
+                        timing.setText(str);
+                    }
+                });
+
 
             }
         });
+
         //spinner
         type = (Spinner) findViewById(R.id.P_shoptype);
         parstate = (TextView) findViewById(R.id.P_state);
@@ -143,16 +265,13 @@ public class Pratisthan extends ActionBarActivity{
         c1.close();
         db1.close();
         final LocationManager manager = (LocationManager) getSystemService( Context.LOCATION_SERVICE );
-
-
-
-
         adapter = new ArrayAdapter<String>(Pratisthan.this, R.layout.spinner, arrayList);
         adapter4 = new ArrayAdapter<String>(Pratisthan.this, R.layout.spinner, arrayList);
         pardistrict.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
+
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 View layout = inflater.inflate(R.layout.popuplist, null);
                 mpopup = new PopupWindow(layout, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, true);
@@ -193,6 +312,7 @@ public class Pratisthan extends ActionBarActivity{
                 submit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        PopupFLAG=0;
                         if(edit.getText().toString().length()!=0) {
                             pardistrict.setText(edit.getText().toString());
                             mpopup.dismiss();
@@ -294,17 +414,19 @@ public class Pratisthan extends ActionBarActivity{
 
             }
         });
-        submit.setOnClickListener(new View.OnClickListener() {
+        submit.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
 
-                if(name.getText().toString().length()!=0 && description.getText().toString().length()!=0 && address.getText().toString().length()!=0 && contact.getText().toString().length()!=0 && email.getText().toString().length()!=0 && parstate.getText().toString().length()!=0 && pardistrict.getText().toString().length()!=0 && type.getSelectedItem().toString().matches("Select")==false )
-                {
-                    update();
-                }else{
-                    Toast.makeText(Pratisthan.this, "Complete All Details", Toast.LENGTH_SHORT).show();
-                }
+
+//                if(name.getText().toString().length()!=0 && description.getText().toString().length()!=0 && address.getText().toString().length()!=0 && contact.getText().toString().length()!=0 && email.getText().toString().length()!=0 && parstate.getText().toString().length()!=0 && pardistrict.getText().toString().length()!=0 && type.getSelectedItem().toString().matches("Select")==false )
+//                {
+//                    update();
+//                }else{
+//                    Toast.makeText(Pratisthan.this, "Complete All Details", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
         userLogin();
@@ -314,14 +436,57 @@ public class Pratisthan extends ActionBarActivity{
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
-
-
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST_1);
             }
-
+        });
+        visitingCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST_2);
+            }
+        });
+        insideview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST_3);
+            }
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        if(PopupFLAG==1)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(Pratisthan.this);
+            builder.setMessage("Data is not Saved , Back press will remove all data you entered");
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener()
+            {
+                public void onClick(DialogInterface dialog, int id)
+                {
+                    PopupFLAG=0;
+                    onBackPressed();
+                }
+            }).setNegativeButton("Cancel", new DialogInterface.OnClickListener()
+            {
+                public void onClick(DialogInterface dialog, int id)
+                {
+
+                }
+            });
+            builder.create();
+        }else
+        {
+            super.onBackPressed();
+        }
+    }
+
     private void userLogin() {
 
             JSONObject jsonObject=new JSONObject();
@@ -398,9 +563,7 @@ public class Pratisthan extends ActionBarActivity{
 
 
         });
-        mJsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(15000,
-                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        mJsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(15000,DefaultRetryPolicy.DEFAULT_MAX_RETRIES,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         MySingleton.getInstance(Pratisthan.this).addToRequestQueue(mJsonObjectRequest);
     }
     private void update()
@@ -448,7 +611,7 @@ public class Pratisthan extends ActionBarActivity{
                         Intent intent = new Intent(Pratisthan.this,MainActivity.class);
                         startActivity(intent);
                         finish();
-                        compress(selectedFileUri);
+                       // compress(selectedFileUri1);
 
                     }else{
                         Toast.makeText(Pratisthan.this, "Details not Enter successfully", Toast.LENGTH_SHORT).show();
@@ -469,26 +632,25 @@ public class Pratisthan extends ActionBarActivity{
 
 
         });
-        mJsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(0,
-                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        mJsonObjectRequest.setRetryPolicy(new DefaultRetryPolicy(0,DefaultRetryPolicy.DEFAULT_MAX_RETRIES,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         MySingleton.getInstance(getApplicationContext()).addToRequestQueue(mJsonObjectRequest);
     }
-    void compress(Uri uri1){
+    synchronized  String compress(Uri uri1, final String str1)
+    {
+
         try {
             bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri1);
-            // if(bitmap.getByteCount()<=500) {
             new Thread(new Runnable() {
                 public void run() {
                     runOnUiThread(new Runnable() {
                         public void run() {
                             String extr = Environment.getExternalStorageDirectory().toString();
-                            File mFolder = new File(extr + File.separator+ getResources().getString(R.string.app_name));
+                            File mFolder = new File(extr + File.separator+ getResources().getString(R.string.app_name)+str1);
                             if (!mFolder.exists()) {
                                 mFolder.mkdir();
                             }
 
-                            String s = ID+".png";
+                            String s = str1+ID+".png";
 
 
                             File f = new File(mFolder.getAbsolutePath(), s);
@@ -504,11 +666,8 @@ public class Pratisthan extends ActionBarActivity{
                                 bitmap.compress(Bitmap.CompressFormat.JPEG, 20, fos);
                                 fos.flush();
                                 fos.close();
-
                                 Log.d("string path",strMyImagePath);
-
-                                selectedFilePath=strMyImagePath;
-                                uploadFile(selectedFilePath);
+                                uploadFile(strMyImagePath,getResources().getString(R.string.imageprat));
 
                             } catch (FileNotFoundException e) {
 
@@ -532,14 +691,12 @@ public class Pratisthan extends ActionBarActivity{
 
                 }
             }).start();
-            // }else{
-            //   Toast.makeText(getActivity(), "Image Size should be less than 500 bytes"+bitmap.getByteCount(), Toast.LENGTH_SHORT).show();
-            // }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return strMyImagePath;
     }
-    public int uploadFile(String sourceFileUri) {
+   synchronized public int uploadFile(String sourceFileUri, String url1) {
 
 
         String fileName = sourceFileUri;
@@ -554,21 +711,11 @@ public class Pratisthan extends ActionBarActivity{
         int maxBufferSize = 1 * 1024 * 1024;
         File sourceFile = new File(sourceFileUri);
 
-        if (!sourceFile.isFile()) {
-
+        if (!sourceFile.isFile())
+        {
             dialog.dismiss();
-
             Log.e("uploadFile", "Source File not exist 33:"+sourceFile.getAbsolutePath());
-
-            runOnUiThread(new Runnable() {
-                public void run() {
-//                    messageText.setText("Source File not exist :"
-//                            +uploadFilePath + "" + uploadFileName);
-                }
-            });
-
             return 0;
-
         }
         else
         {
@@ -576,8 +723,7 @@ public class Pratisthan extends ActionBarActivity{
 
                 // open a URL connection to the Servlet
                 FileInputStream fileInputStream = new FileInputStream(sourceFile);
-                URL url = new URL(getResources().getString(R.string.imageprat));
-
+                URL url = new URL(url1);
                 // Open a HTTP  connection to  the URL
                 conn = (HttpURLConnection) url.openConnection();
                 conn.setDoInput(true); // Allow Inputs
@@ -591,7 +737,6 @@ public class Pratisthan extends ActionBarActivity{
                 dos = new DataOutputStream(conn.getOutputStream());
                 dos.writeBytes(twoHyphens + boundary + lineEnd);
                 dos.writeBytes("Content-Disposition: form-data; name=uploaded_file;filename='"+ fileName + "'" + lineEnd);
-
                 dos.writeBytes(lineEnd);
 
                 // create a buffer of  maximum size
@@ -620,8 +765,7 @@ public class Pratisthan extends ActionBarActivity{
                 serverResponseCode = conn.getResponseCode();
                 String serverResponseMessage = conn.getResponseMessage();
 
-                Log.i("uploadFile", "HTTP Response is : "
-                        + serverResponseMessage + ": " + serverResponseCode+ serverResponseMessage + ": " + serverResponseMessage);
+                Log.i("uploadFile", "HTTP Response is : "+ serverResponseMessage + ": " + serverResponseCode+ serverResponseMessage + ": " + serverResponseMessage);
 
                 if(serverResponseCode == 200){
 
@@ -647,8 +791,7 @@ public class Pratisthan extends ActionBarActivity{
                 runOnUiThread(new Runnable() {
                     public void run() {
                         // messageText.setText("MalformedURLException Exception : check script url.");
-                        Toast.makeText(Pratisthan.this, "MalformedURLException",
-                                Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Pratisthan.this, "MalformedURLException",Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -661,11 +804,10 @@ public class Pratisthan extends ActionBarActivity{
                 runOnUiThread(new Runnable() {
                     public void run() {
 //                        messageText.setText("Got Exception : see logcat ");
-                        Toast.makeText(Pratisthan.this, "Got Exception : see logcat ",
-                                Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Pratisthan.this, "Got Exception : see logcat ",Toast.LENGTH_SHORT).show();
                     }
                 });
-                Log.e("Upload file to server Exception", "Exception : "+ e.getMessage(), e);
+                Log.e("Upload file to server Exception", e.getMessage(), e);
             }
 
             return serverResponseCode;
@@ -676,16 +818,50 @@ public class Pratisthan extends ActionBarActivity{
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+        if (requestCode == PICK_IMAGE_REQUEST_1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
             final Uri uri = data.getData();
             Bitmap bitmap = null;
             try {
                 bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                selectedFileUri = data.getData();
-                selectedFilePath = filepath.getPath(getApplicationContext(),selectedFileUri);
+                selectedFileUri1 = data.getData();
+                selectedFilePath1 = filepath.getPath(getApplicationContext(),selectedFileUri1);
                 upload.setImageBitmap(bitmap);
-                Log.d("Selected File Path:" , selectedFilePath);
+                Log.d("Selected File Path upload:" , selectedFilePath1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+
+        }
+        if (requestCode == PICK_IMAGE_REQUEST_2 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+
+            final Uri uri = data.getData();
+            Bitmap bitmap = null;
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                selectedFileUri2 = data.getData();
+                selectedFilePath2 = filepath.getPath(getApplicationContext(),selectedFileUri2);
+                visitingCard.setImageBitmap(bitmap);
+                Log.d("Selected File Path visitingCard:" , selectedFilePath2);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+
+        }
+        if (requestCode == PICK_IMAGE_REQUEST_3 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+
+            final Uri uri = data.getData();
+            Bitmap bitmap = null;
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                selectedFileUri3 = data.getData();
+                selectedFilePath3 = filepath.getPath(getApplicationContext(),selectedFileUri3);
+                insideview.setImageBitmap(bitmap);
+                Log.d("Selected File Path insideview:" , selectedFilePath3);
             } catch (IOException e) {
                 e.printStackTrace();
             }
